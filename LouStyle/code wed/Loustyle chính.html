@@ -1,0 +1,2027 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LOU STYLE</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://scontent.fsgn5-3.fna.fbcdn.net/v/t39.30808-6/434290772_1451369069109854_3871944161108900960_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGnDP5VID9l_8sCYu161x3E5KZwwUVjZRfkpnDBRWNlF-dtBFlHPLx5Dmbs30FpKggWtQEMXsXmexsKdmXja3Ie&_nc_ohc=Y4v3cq2UfwkAX8RBJol&_nc_ht=scontent.fsgn5-3.fna&oh=00_AfC5xzwAWMCTITgsDp46y5CAPmSIKSWuBGj7gWoLRdWzlA&oe=660AEDF3">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* CSS cho thanh menu */
+        /* thanh menu */
+        .navbar {
+            display: flex;
+            justify-content: flex-end; /* Đưa menu về phía bên phải */
+            align-items: center; /* Căn giữa theo chiều dọc */
+            background-color: rgb(151, 200, 236);
+            font-family: "Courier New", Courier, monospace;
+        }
+
+        /* chữ thanh menu  */
+        .navbar a {
+            font-size: 20px;
+            color: rgb(16, 10, 10);
+            padding: 10px 14px;
+            text-decoration: none;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-right: 20px; /* Thêm khoảng cách giữa các menu items */
+        }
+
+        /*    khu blog  */
+        .dropbtn {
+            background-color: rgb(151, 200, 236);
+            color: rgb(19, 15, 15);
+            padding: 12px 14px;
+            font-size: 20px;
+            border: none;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+
+        /*   giấu chuyên mục   */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgb(86, 78, 78);
+            z-index: 1;
+        }
+
+        /* khu chuyên mục nhỏ  */
+
+        .dropdown-content a {
+            color: rgb(86, 78, 78);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* thanh thả xuống */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Style tab content */
+        .tab-content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+
+        /* Show the active tab */
+        #Home {
+            display: block;
+        }
+
+        /* nội dung home */
+        .container2 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            display: none;
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        /* Product */
+        .product {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .product .item {
+            width: calc(33.33% - 30px);
+            margin-bottom: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
+        .product .item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(83, 114, 138, 0.1);
+        }
+
+        .product .item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .product .item h4 {
+            margin-top: 10px;
+            font-size: 18px;
+            text-align: center;
+            color: #000;
+        }
+
+        .product .item p {
+            color: #666;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+.product .item button {
+    display: block;
+    width: 100%;
+    padding: 4px 2px;
+    border: none;
+    border-radius: 7px;
+    background-image: linear-gradient(to right, rgb(33, 112, 168), rgb(204, 230, 255));
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 10px; /* Thêm khoảng cách dưới 10px */
+}
+
+
+        .product .item button:hover {
+            background-color: #555;
+        }
+
+        /* Footer */
+        .footer {
+            
+            bottom: 0; /* Đặt footer ở phía dưới cùng của trang */
+            left: 0; /* Đảm bảo footer bắt đầu từ phía bên trái của trang */
+            width: 100%; /* Chiều rộng của footer bằng 100% của trang */
+            background-color: #4388c4;
+            color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .footer ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .footer ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer ul li a:hover {
+            color: #ccc;
+        }
+
+        .div1 {
+            width: 500px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px; /* Đã chỉnh sửa */
+            margin: 20px auto; /* Đã chỉnh sửa */
+        }
+
+        #more {
+            display: none;
+        }
+
+        /* tips */
+        .container4 {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .article-list {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .article {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .article img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .article h2 {
+            margin-top: 10px;
+            font-size: 20px;
+        }
+
+        .article p {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        .read-more-btn {
+            display: block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .read-more-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .article-detail {
+            flex: 1;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .comment-box {
+            margin-top: 20px;
+        }
+
+        .comment-box textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .comment-box input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .comment-box input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .comment-list {
+            margin-top: 20px;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .comment-list li {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .comment-list li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .comment-list li img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .comment-list li p {
+            margin: 0;
+        }
+
+        .no-comment {
+            margin-top: 20px;
+            font-style: italic;
+            color: #666;
+        }
+
+        /* CSS cho thanh tìm kiếm */
+        .search-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        input[type=text] {
+            width: 30%;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        /* Kết quả tìm kiếm */
+        .search-result {
+            margin-top: 20px;
+            text-align: center;
+            display: none;
+        }
+
+        .search-result p {
+            font-size: 18px;
+            color: #333;
+        }
+     /* Banner header*/
+     .header-image {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .header-image img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+/* Banner */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Next & previous buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+/* nền dăng nhập  */
+.login-container1 {
+            background-image: url('https://scontent.fsgn5-8.fna.fbcdn.net/v/t39.30808-6/440041847_1881179549049348_7062526895957581696_n.jpg?stp=dst-jpg_p960x960&_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeF2ZFIy4Nr6wz4R4fTzfEbfEOzI1J3vyKQQ7MjUne_IpEmQCfc6oppRyFdqREsZEzuiafXl-owykWOjCnaqkvFZ&_nc_ohc=K6ZfFfSmZ60Ab4hKKFo&_nc_ht=scontent.fsgn5-8.fna&oh=00_AfDq1bKbx8gvRY0iP32DnBI-GnOY7aVkMJv1A3Ij3QOjEA&oe=662C4EBC');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            font-weight: bold;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .input-group button {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .input-group button:hover {
+            background-color: #0056b3;
+        }
+
+        /* CSS cho form liên hệ */
+        .contact-form {
+            width: 350px; /* Điều chỉnh kích thước của form liên hệ */
+            margin-right: 100px; /* Khoảng cách với phần bên phải */
+            background-color:white;
+            padding: 20px;
+            border-radius: 20px;
+            text-align: center;
+            margin-left: auto; /* Căn giữa form bên phải */
+        }
+        .popup {
+    position: fixed; /* Định vị popup cố định trên màn hình */
+    top: 50%; /* Đặt top ở giữa màn hình theo chiều dọc */
+    left: 50%; /* Đặt left ở giữa màn hình theo chiều ngang */
+    transform: translate(-50%, -50%); /* Dịch chuyển popup điều chỉnh vị trí chính giữa */
+    background-color: #ffffff; /* Màu nền của popup */
+    padding: 20px; /* Khoảng cách bên trong của popup */
+    border-radius: 8px; /* Bo tròn các góc của popup */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Đổ bóng cho popup */
+    z-index: 1000; /* Xác định vị trí chồng chéo của popup */
+    max-width: 80%; /* Chiều rộng tối đa của popup */
+    width: 400px; /* Độ rộng của popup */
+    max-height: 80%; /* Chiều cao tối đa của popup */
+    overflow-y: auto; /* Cho phép cuộn nếu nội dung quá dài */
+}
+
+.popup-content {
+    text-align: center; /* Căn giữa nội dung trong popup */
+}
+
+.popup-close {
+    position: absolute; /* Định vị nút đóng cố định */
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #888888;
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.quantity-selector button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+}
+
+.quantity-selector input {
+    width: 60px;
+    text-align: center;
+    font-size: 16px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+ 
+/* CSS để điều chỉnh layout của navbar */
+.navbar {
+    display: flex; /* Sử dụng flexbox để căn chỉnh các phần tử trong navbar */
+    align-items: center; /* Căn chỉnh các phần tử theo chiều dọc */
+    justify-content: space-between; /* Căn phân bố các phần tử theo chiều ngang */
+    padding: 10px; /* Padding cho navbar */
+}
+
+.logo-image {
+    width: 50px; /* Chiều rộng của logo */
+    height: auto; /* Chiều cao tự động để giữ tỷ lệ */
+}
+
+.navbar-right {
+    display: flex; /* Sử dụng flexbox cho phần navbar-right */
+    align-items: center; /* Căn chỉnh các phần tử theo chiều dọc */
+}
+
+.navbar-right a {
+    margin-left: 20px; /* Khoảng cách giữa các liên kết điều hướng */
+}
+
+/* CSS styles for notification */
+.notification {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            display: none;
+            animation: fadeInOut 1s forwards;
+        }
+
+        /* Animation keyframes */
+        @keyframes fadeInOut {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; display: none; }
+        }
+        /* bình luận */
+.customer-feedback {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .customer {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+  }
+  .customer img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  h3, p {
+    font-size: 14px;
+  }
+  /* CSS cho phần giỏ hàng */
+.cart-container {
+    position: fixed;
+    bottom: 0cm;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1; /* Đảm bảo hiển thị trên các phần khác */
+    width: 300px; /* Điều chỉnh chiều rộng theo nhu cầu */
+    display: none;
+}
+
+.cart-container h2 {
+    margin-top: 0;
+}
+
+.cart-items {
+    max-height: 300px; /* Giới hạn chiều cao để có thanh cuộn nếu nhiều sản phẩm */
+    overflow-y: auto; /* Thanh cuộn dọc */
+}
+
+/* Định nghĩa kích thước mới cho ảnh trong giỏ hàng */
+.cart-item img {
+    width: 50px; /* Đặt chiều rộng của ảnh là 50px */
+    height: auto; /* Giữ tỷ lệ khung hình */
+    border-radius: 5px; /* Bo tròn các góc của ảnh */
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* CSS cho hiển thị của thông báo */
+.notification {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    display: none;
+    animation: fadeInOut 1s forwards;
+}
+
+
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+<div class="navbar">
+    <!-- Logo -->
+    <a href="#home" class="logo">
+        <img src="d:\logo.png" alt="Logo" class="logo-image">
+    </a>
+
+    <!-- Phần bên phải của header -->
+    <div class="navbar-right">
+        <a href="#h" onclick="openTab('Home')">Trang chủ</a>
+        
+        <div class="dropdown">
+            <button class="dropbtn">Sản phẩm 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#" onclick="openTab('Quanao')">Quần áo</a>
+                <a href="#" onclick="openTab('Giaydep')">Giày dép</a>
+                <a href="#" onclick="openTab('Tuixach')">Túi xách</a>
+            </div>
+        </div>
+        
+        <a href="#" onclick="openTab('Tip')">Tips thời trang</a>
+        <a href="#" onclick="openTab('DN')">Đăng nhập</a>
+        <a href="#" onclick="openTab('Giohang')">🛒</a>
+    </div>
+    </div>
+   
+             <!-- Đăng nhập -->
+    <div id="DN" class="tab-content">
+        <div class="login-container1">
+            <div class="container">
+                <div class="contact-form">
+                    <h2>Đăng nhập</h2>
+                    <form  id="loginForm">
+                    <div class="input-group">
+                        <label for="loginUsername">Tên đăng nhập:</label>
+                        <input type="text" id="loginUsername" name="loginUsername" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="loginPassword">Mật khẩu:</label>
+                        <input type="password" id="loginPassword" name="loginPassword" required>
+                    </div>
+                    <div class="input-group">
+                        <button type="submit" value="Login">Đăng nhập</button>
+                    </div>
+                    <div class="input-group">
+                        <a href="#" onclick="openTab('DangKi')">Đăng kí</a> |  <a href="#" onclick="openTab('QMK')">Quên mật khẩu?</a>
+                    </div>
+                    <script>
+                        // Hàm kiểm tra xác thực đăng nhập
+                        function authenticate(username, password) {
+                            var storedUsername = localStorage.getItem("username");
+                            var storedPassword = localStorage.getItem("password");
+                            if (username === storedUsername && password === storedPassword) {
+                                return true;
+                            } else {
+                                return false;
+                            }
+                        }
+                        document.getElementById("loginForm").addEventListener("submit", function(event) {
+                        event.preventDefault();
+                        var username = document.getElementById("loginUsername").value;
+                        var password = document.getElementById("loginPassword").value;
+                        if (authenticate(username, password)) {
+                            window.location.href = "afterlogin.html";
+                        } else {
+                            alert("Tên người dùng hoặc mật khẩu không đúng!");
+                            
+                            }
+                    });
+                        
+                    </script>
+                 </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="DangKi" class="tab-content">
+        <div class="register-container1">
+            <div class="container">
+                <div class="contact-form">
+                    <h2>Đăng kí</h2>
+                    <form  id="registerForm">
+                    <div class="input-group">
+                        <label for="registerUsername">Username:</label>
+                        <input type="text" id="registerUsername" name="registerUsername" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="registerPassword">Mật khẩu:</label>
+                        <input type="password" id="registerPassword" name="registerPassword" required>
+                    </div>
+                    <div class="input-group">
+                        <button type="submit" value="Register">Đăng kí</button>
+                    </div>
+                    <script>
+                        
+                        document.getElementById("registerForm").addEventListener("submit", function(event) {
+                        event.preventDefault();
+                        var username = document.getElementById("registerUsername").value;
+                        var password = document.getElementById("registerPassword").value;
+                        localStorage.setItem("username", username);
+                        localStorage.setItem("password", password);
+                        alert("Đăng ký thành công!");
+                    });
+                
+                    </script>
+                 </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="QMK" class="tab-content">
+        <div class="qmk-container1">
+            <div class="container">
+                <div class="contact-form">
+                    <h2>Đăng kí</h2>
+                    <form  id="forgotPasswordForm">
+                    <div class="input-group">
+                        <label for="forgotUsername">Username:</label>
+                        <input type="text" id="forgotUsername" name="forgotUsername" required>
+                    </div>
+                        <button type="submit" value="Gửi yêu cầu">Gửi yêu cầu</button>
+                    </div>
+                    <script>
+                        
+                        document.getElementById("forgotPasswordForm").addEventListener("submit", function(event) {
+                        event.preventDefault();
+                        var username = document.getElementById("forgotUsername").value;
+                        var storedUsername = localStorage.getItem("username");
+                        if (username === storedUsername) {
+                            alert("Một email chứa hướng dẫn lấy lại mật khẩu đã được gửi đến địa chỉ email của bạn.");
+                        } else {
+                            alert("Tên người dùng không tồn tại!");
+                        }
+                    });
+                    </script>
+                 </form>
+                </div>
+            </div>
+        </div>
+    </div>
+   <!-- Banner -->
+     <!-- Banner -->
+     <!-- chỉ định phần-->
+     <div id="Home" class="tab-content">
+        <div class="slideshow-container">
+         <div class="mySlides">
+             <img src="https://scontent.fsgn5-11.fna.fbcdn.net/v/t39.30808-6/439823351_1881178792382757_4814873406885277917_n.jpg?stp=dst-jpg_p960x960&_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeE415D63-AIj3fU22_UNVnM-byPbsdz5e35vI9ux3Pl7cGzIvnf8IUPamACy2ocBWBjYcz30fBWuXhTqSIV2i5T&_nc_ohc=QO9hj0MkrE4Ab5s5jOK&_nc_oc=AdhneVVEVotxs7oQd2HTfxUet4Adsus-VvsPu2xBpWyA26D6fxdjA2dro9hl23DzUNE&_nc_ht=scontent.fsgn5-11.fna&oh=00_AfB1nCa5I6AQ2kPe0fTR-TnVzyJ89cyXCS7RVs9NnlE_YQ&oe=662C3B47" alt="Slide 1">
+         </div>
+         <div class="mySlides">
+             <img src="https://scontent.fsgn5-12.fna.fbcdn.net/v/t39.30808-6/440095221_1881179222382714_881889493927653286_n.jpg?stp=dst-jpg_p960x960&_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHSxDAU4FsMwwTHMIlNF3m2k5uz4ItXfF-Tm7Pgi1d8X7-nY1xq5xRnXv5IS4r0xhONCpFqRAezPbncKkFk2idI&_nc_ohc=TaAeYPURU7MAb5jUi0F&_nc_ht=scontent.fsgn5-12.fna&oh=00_AfDPaI05Fewkn6ADQVVQOhvy7FmZURKZNtYJPf-FI57nCQ&oe=662C3E7C" alt="Slide 3">
+         </div>
+     
+         <!-- Next and previous buttons -->
+         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+         <a class="next" onclick="plusSlides(1)">&#10095;</a>
+     </div>
+     
+     <script>
+         var slideIndex = 0;
+         showSlides();
+     
+         function showSlides() {
+             var i;
+             var slides = document.getElementsByClassName("mySlides");
+             for (i = 0; i < slides.length; i++) {
+                 slides[i].style.display = "none";
+             }
+             slideIndex++;
+             if (slideIndex > slides.length) {slideIndex = 1}
+             slides[slideIndex-1].style.display = "block";
+             setTimeout(showSlides, 3000); // Change image every 5 seconds
+         }
+     
+         function plusSlides(n) {
+             showSlides(slideIndex += n);
+         }
+     </script>
+         <!-- Kết thúc banner-->
+     <!-- Thanh tìm kiếm -->
+     <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Nhập từ khóa...">
+        <button onclick="search()">Tìm kiếm</button>
+    </div>
+
+    <!-- Kết quả tìm kiếm -->
+    <div class="search-result" id="searchResult">
+        <p id="searchText"></p>
+    </div>
+
+    <script>
+        // Danh sách từ khóa và mục liên quan
+        var keywords = {
+            "quần áo": "Mục liên quan đến quần áo",
+            "giày dép": "Mục liên quan đến giày dép",
+            "túi xách": "Mục liên quan đến túi xách"
+        };
+
+        // Hàm tìm kiếm // Hàm search có 4 hàm là search(), search1() , search2() ,search3() ,tương ứng với từng loại tìm kiếm trang chủ , quần áo , giày dép , túi xách
+        // Vì id của mỗi field điền là khác nhau nên cần phải chia ra 4 hàm khác nhau
+        function search() {
+            var keyword = document.getElementById("searchInput").value.toLowerCase(); // Lấy từ khóa nhập vào và chuyển thành chữ thường
+            var resultDiv = document.getElementById("searchResult");
+            var resultText = document.getElementById("searchText");
+
+            // Kiểm tra từ khóa và hiển thị kết quả tương ứng
+            if (keywords.hasOwnProperty(keyword)) {
+                resultText.textContent = keywords[keyword];
+                if(keyword === "quần áo")
+                {
+                   openTab('Quanao')
+                }
+                if(keyword === "giày dép")
+                {
+                    openTab('Giaydep')
+                }
+                if(keyword === "túi xách")
+                {
+                    openTab('Tuixach')
+                }
+            } else {
+                resultText.textContent = "Không tìm thấy kết quả cho từ khóa '" + keyword + "'.";
+            }
+
+            resultDiv.style.display = "block";
+        }
+    </script>
+    
+    </script>
+    
+    <div class="div1">
+        <h2> Sản phẩm nổi bật </h2>
+    </div>
+    <!-- Products -->
+   <section class="main-content">
+    <div class="container">
+        <div class="product">
+            <!-- Product 1 -->
+            <div class="item">
+                <img src="https://dony.vn/wp-content/uploads/2022/03/decor-goc-chup-anh-cho-shop-quan-ao-1.jpg" alt="Product 1">
+                <h4>Váy đi biển</h4>
+                <p>200.000 VND</p>
+                <button onclick="addToCart(1)">Thêm vào giỏ hàng</button>
+                <button onclick="showDescription(1)">Mô tả</button> 
+            </div>
+            <!-- Product 2 -->
+            <div class="item">
+                <img src="https://scontent.fsgn5-15.fna.fbcdn.net/v/t39.30808-6/437858644_770242008539789_492445802928757032_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHT0l4MTQLUsSh99T2diLF-r9AJZ315ldKv0AlnfXmV0vvlDykCvT8OO27Xe7E5t1v6C8VdXWfCuZtI8TZZTN0v&_nc_ohc=86VF34aj9RMAb7RA11C&_nc_oc=Adi3qKq8UpRLdspXJxMXdVzXzcWcFQvLh-gZlhHi2Cpdz4YWQFxL6nY-fuQ8ulJHlvw&_nc_ht=scontent.fsgn5-15.fna&oh=00_AfCtENe9IkhRQBOsp8avHL0kkofin8jyt4InJjkPZPqNHg&oe=662BD415" alt="Product 2">
+                <h4>Váy đi tiệc </h4>
+                <p>200.000 VND</p>
+                <button onclick="addToCart(2)">Thêm vào giỏ hàng</button>
+                <button onclick="showDescription(2)">Mô tả</button>
+            </div>
+            <!-- Product 3 -->
+            <div class="item">
+                <img src="https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/438215961_3829190620698278_4242798047738181578_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHBQkRe4Z7ccv0oaRfwE-BwrrjRyCLloWquuNHIIuWhaup4E0cqmO7wfMctcTtpKBOyF3LBBNzXYXLiAhFaJQwn&_nc_ohc=hJed4r_8d0IAb7WcH5V&_nc_ht=scontent.fsgn5-9.fna&oh=00_AfC8qeGkL-DjRx98Sv437UGxFtcvAcYzeM3vF0LvazpI6A&oe=662C0FE3" alt="Product 3">
+                <h4>Túi baby xinh </h4>
+                <p>200.000 VND</p>
+                <button onclick="addToCart(3)">Thêm vào giỏ hàng</button>
+                <button onclick="showDescription(3)">Mô tả</button>
+            </div>
+            <!-- Product 4 -->
+            <div class="item">
+                <img src="https://scontent.fsgn5-15.fna.fbcdn.net/v/t39.30808-6/439343828_396210656629755_3569976778127775836_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeG4vP_RydWZGnVQekwGIWU0B_Q4jCZQ8DwH9DiMJlDwPC_jJeuy9onZEW8ypafT2z9sdf9KGiWd4vXtLmOSIVbV&_nc_ohc=go6zE9kIrEIAb6f-BzZ&_nc_ht=scontent.fsgn5-15.fna&oh=00_AfCv0amA5aiculPV81Rf_U0Hc7vzqVS76d6TH3zDtpa8DA&oe=662C02ED" alt="Product 4">
+                <h4>set bộ ngắn xinh </h4>
+                <p>200.000 VND</p>
+        <button onclick="addToCart(4)">Thêm vào giỏ hàng</button>
+        <button onclick="showDescription(4)">Mô tả</button>
+            </div>
+            <!-- Product 5 -->
+            <div class="item">
+                <img src="https://toplist.vn/images/800px/bo-si-giay-dep-nu-610832.jpg" alt="Product 5">
+                <h4>Giày dây trắng hoa</h4>
+                <p>200.000 VND</p>
+                <button onclick="addToCart(5)">Thêm vào giỏ hàng</button>
+                <button onclick="showDescription(5)">Mô tả</button>
+            </div>
+            <!-- Product 6 -->
+            <div class="item">
+                <img src="https://mymall.vn/wp-content/uploads/2018/09/giay-the-thao-nu-de-cao-1.jpg" alt="Product 6">
+                <h4>Giày thể thao trắng</h4>
+                <p>200.000 VND</p>
+                <button onclick="addToCart(6)">Thêm vào giỏ hàng</button>
+                <button onclick="showDescription(6)">Mô tả</button>
+            </div>
+            </div>
+            </div>
+            </section>
+        
+
+    <!-- Banner -->
+    <div class="div1">
+        <h2> Tips của bạn </h2>
+    </div>
+    <section class="main-content">
+        <div class="container">
+            
+            <div class="product">
+                <div class="item">
+                    <img src="https://www.elle.vn/wp-content/uploads/2018/10/14/154922/nhung-phong-cach-thoi-trang-ma-ban-nen-biet.jpg" alt="Hình ảnh bài viết 1">
+                    <h4>Cách phối đồ nữ: 100+ gợi ý phối đồ cực trendy 2024</h4>
+                    <p>Một bộ outfit vừa xinh xắn vừa cá tính chính là vũ khí bí mật giúp các cô nàng luôn tự tin và thu hút ánh nhìn hơn. </p>
+                    <button onclick="showArticleDetail(1)">Đọc thêm</button>
+                </div>
+                <div class="item">
+                    <img src="https://file.hstatic.net/1000317075/file/cach-phoi-do-nu-mua-dong_b0dd72ef86f34eab8625bca0099aee8b.jpg" alt="Hình ảnh bài viết 2">
+                    <h4>Phối đồ mùa đông cho bạn gái </h4>
+                    <p>Bạn đang lo lắng về cách phối trang phục sao cho nổi bật nhưng vẫn giữ được phong cách cá nhân . </p>
+                    <button onclick="showArticleDetail(2)">Đọc thêm</button>
+                </div>
+                <div class="item">
+                    <img src="https://www.elle.vn/wp-content/uploads/2020/03/14/393751/tui-xach-nu-tui-tote-gucci-730x410.jpg" alt="Hình ảnh bài viết 3">
+                    <h4> SAU SỰ TRỖI DẬY CỦA TÚI XÁCH “BÁNH SỪNG BÒ”, TÚI BAGUETTE TRỞ LẠI NHƯ MỘT HIỆN TƯỢNG MỚI </h4>
+                    <p> Kỷ niệm 10 năm tiếp theo, CHATS BY C.DAM ra mắt bộ sưu tập ARCHETYPE, tiếp tục tôn vinh trí tuệ tính nữ và triết lý tối giản khác biệt..</p>
+                    <button onclick="showArticleDetail(3)">Đọc thêm</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bình luận khách -->
+    <div class="div1">
+        <h2> Góc Feedback </h2>
+    </div>
+<div class="customer-feedback">
+    <div class="customer">
+      <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/08/hinh-anh-chibi.jpg" alt="Avatar">
+      <h3>Nguyễn Văn A</h3>
+      <p>Trang web đẹp, ưa nhìn và dễ sử dụng. Tôi rất thích và sẽ tiếp mục mua đồ trên đây !</p>
+    </div>
+    <div class="customer">
+      <img src="https://nyse.edu.vn/wp-content/uploads/2023/02/1676237850_2023-Hinh-Anh-Avatar-Dep-Cute-Ngau-Lam-Hinh-Dai.jpg" alt="Avatar">
+      <h3>Trần Thị B</h3>
+      <p>Trang web này có nhiều trang phục đẹp và đa dạng. Tôi thích cách phối màu!</p>
+    </div>
+    <div class="customer">
+      <img src="https://i.pinimg.com/originals/71/10/09/711009eeda754483ef5af0ef1d7b075f.jpg" alt="Avatar">
+      <h3>Phạm Văn C</h3>
+      <p>Trang web cung cấp những thông tin hữu ích và giải pháp tốt cho nhu cầu của tôi. Cảm ơn!</p>
+    </div>
+    <div class="customer">
+      <img src="https://phunugioi.com/wp-content/uploads/2020/11/hinh-ve-cute-anime-girl.jpg" alt="Avatar">
+      <h3>Lê Thị D</h3>
+      <p>Thật tuyệt vời khi tìm thấy trang web này. Tôi sẽ giới thiệu cho bạn bè của tôi!</p>
+    </div>
+    <div class="customer">
+      <img src="https://img.hoidap247.com/picture/answer/20201128/large_1606560055832.jpg" alt="Avatar">
+      <h3>Hoàng Thiên H</h3>
+      <p>Trang web mang lại cho tôi một trải nghiệm mua sắm thú vị. Tôi sẽ quay lại!</p>
+    </div>
+    <div class="customer">
+      <img src="https://freenice.net/wp-content/uploads/2021/08/avatar-meo-xam-cute.jpg" alt="Avatar">
+      <h3>Nguyễn Văn E</h3>
+      <p>Trang web mang lại cho tôi một trải nghiệm mua sắm thú vị. Tôi sẽ quay lại!</p>
+    </div>
+    <div class="customer">
+      <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-gau-cute.jpg" alt="Avatar">
+      <h3>Hoàng Thị E</h3>
+      <p>Trang web mang lại cho tôi một trải nghiệm mua sắm thú vị. Tôi sẽ quay lại!</p>
+    </div>
+    <div class="customer">
+      <img src="https://tse4.mm.bing.net/th?id=OIP.YCD6fQm8Koay_8UD8LkUBgHaHa&pid=Api&P=0&h=220" alt="Avatar">
+      <h3>Hoàng Văn P</h3>
+      <p>Trang web mang lại cho tôi một trải nghiệm mua sắm thú vị. Tôi sẽ quay lại!</p>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+</div>
+
+    <!-- khu vực sản phẩm -->
+    <div id="Quanao" class="tab-content">
+         <!-- Thanh tìm kiếm -->
+     <div class="search-container">
+        <input type="text" id="searchInput1" placeholder="Nhập từ khóa...">
+        <button onclick="search1()">Tìm kiếm</button>
+    </div>
+    <script>
+        // Danh sách từ khóa và mục liên quan
+        var keywords = {
+            "quần áo": "Mục liên quan đến quần áo",
+            "giày dép": "Mục liên quan đến giày dép",
+            "túi xách": "Mục liên quan đến túi xách"
+        };
+
+        // Hàm tìm kiếm
+        function search1() {
+            var keyword = document.getElementById("searchInput1").value.toLowerCase(); // Lấy từ khóa nhập vào và chuyển thành chữ thường
+            var resultDiv = document.getElementById("searchResult1");
+            var resultText = document.getElementById("searchText1");
+
+            // Kiểm tra từ khóa và hiển thị kết quả tương ứng
+            if (keywords.hasOwnProperty(keyword)) {
+                resultText.textContent = keywords[keyword];
+                if(keyword === "quần áo")
+                {
+                   openTab('Quanao')
+                }
+                if(keyword === "giày dép")
+                {
+                    openTab('Giaydep')
+                }
+                if(keyword === "túi xách")
+                {
+                    openTab('Tuixach')
+                }
+            } else {
+                resultText.textContent = "Không tìm thấy kết quả cho từ khóa '" + keyword + "'.";
+            }
+
+            resultDiv.style.display = "block";
+        }
+    </script>
+    <!-- Kết quả tìm kiếm -->
+    <div class="search-result" id="searchResult1">
+        <p id="searchText1"></p>
+    </div>
+
+    <!-- sản phẩm -->
+    <section class="main-content">
+        <div class="container">
+            <div class="div1">
+                <h2> Quần áo  </h2>
+            </div>
+            <div class="product">
+                <!--sản phẩm --> 
+                <!-- Product 1 -->
+                <div class="item">
+                    <img src="https://dony.vn/wp-content/uploads/2022/03/decor-goc-chup-anh-cho-shop-quan-ao-1.jpg" alt="Product 1">
+                    <h4>Váy đi biển</h4>
+                    <p>200.000 VND</p>
+            <button onclick="addToCart(1)">Thêm vào giỏ hàng</button>
+            <button onclick="showDescription(1)">Mô tả</button>
+                </div>
+                <div class="item">
+                    <img src="https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/436516270_761083812805042_2442831875979382470_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEyZT-JE7g1k-uaLeb0rR8JXXdjWnyiP89dd2NafKI_z5oIoY5JOe1ZIj19GWPcDuGdXLnm1PzZT6ZdvO423qij&_nc_ohc=5uZQQyGNfQ0Ab5moAJq&_nc_ht=scontent.fsgn5-5.fna&oh=00_AfDotvy5z398pKGpleUSNw7n0UUBGYl9hg5RAs07XAu6fQ&oe=662BDC56" alt="Product 1">
+                    <h4>Váy trắng dạ tiệc </h4>
+                    <p>200.000 VND</p>
+            <button onclick="addToCart(23)">Thêm vào giỏ hàng</button>
+            <button onclick="showDescription(23)">Mô tả</button>
+                </div>
+                <!-- Product 2 -->
+                <div class="item">
+                    <img src="https://scontent.fsgn5-15.fna.fbcdn.net/v/t39.30808-6/437858644_770242008539789_492445802928757032_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHT0l4MTQLUsSh99T2diLF-r9AJZ315ldKv0AlnfXmV0vvlDykCvT8OO27Xe7E5t1v6C8VdXWfCuZtI8TZZTN0v&_nc_ohc=86VF34aj9RMAb7RA11C&_nc_oc=Adi3qKq8UpRLdspXJxMXdVzXzcWcFQvLh-gZlhHi2Cpdz4YWQFxL6nY-fuQ8ulJHlvw&_nc_ht=scontent.fsgn5-15.fna&oh=00_AfCtENe9IkhRQBOsp8avHL0kkofin8jyt4InJjkPZPqNHg&oe=662BD415" alt="Product 2">
+                    <h4>Váy đi tiệc </h4>
+                    <p>200.000 VND</p>
+            <button onclick="addToCart(2)">Thêm vào giỏ hàng</button>
+            <button onclick="showDescription(2)">Mô tả</button>
+                </div>
+                <div class="item">
+                    <img src="https://scontent.fsgn5-11.fna.fbcdn.net/v/t39.30808-6/438972430_976269524207668_7976763003870829967_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHeJ5J2DlIECN8mU-ERpRB9o7xolMe4asyjvGiUx7hqzCRCDRQPF4jg9K-jm2A2YLAVrPOh7FbpzTwhLlghfJ_j&_nc_ohc=uHx4Sd3-I4cAb4I4U7E&_nc_ht=scontent.fsgn5-11.fna&oh=00_AfAP1HZexpFtUz3TfwnMu5XkN-a6H4mEmh01T49EZuzvOQ&oe=662BEB1F" alt="Product 7">
+                    <h4>Set bộ baby </h4>
+                    <p>200.000 VND</p>
+                    <button onclick="addToCart(7)">Thêm vào giỏ hàng</button>
+                    <button onclick="showDescription(7)">Mô tả</button>
+                </div>
+                <div class="item">
+                    <img src="https://salt.tikicdn.com/cache/w1200/ts/product/c8/6f/64/bd8afb8f2b55004077dc58ab04fef5d0.jpg" alt="Product 8">
+                    <h4>Chân váy dài</h4>
+                    <p>200.000 VND</p>
+                    <button onclick="addToCart(8)">Thêm vào giỏ hàng</button>
+                    <button onclick="showDescription(8)">Mô tả</button>
+                </div>
+                <div class="item">
+                    <img src="https://scontent.fsgn5-15.fna.fbcdn.net/v/t39.30808-6/439343828_396210656629755_3569976778127775836_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeG4vP_RydWZGnVQekwGIWU0B_Q4jCZQ8DwH9DiMJlDwPC_jJeuy9onZEW8ypafT2z9sdf9KGiWd4vXtLmOSIVbV&_nc_ohc=go6zE9kIrEIAb6f-BzZ&_nc_ht=scontent.fsgn5-15.fna&oh=00_AfCv0amA5aiculPV81Rf_U0Hc7vzqVS76d6TH3zDtpa8DA&oe=662C02ED" alt="Product 4">
+                    <h4>set bộ ngắn xinh </h4>
+                    <p>200.000 VND</p>
+            <button onclick="addToCart(4)">Thêm vào giỏ hàng</button>
+            <button onclick="showDescription(4)">Mô tả</button>
+                </div>
+                </div>
+                </div>
+                </section>
+                </div>
+                
+                
+<!--giay dep--> 
+<div id="Giaydep" class="tab-content">
+ <div class="search-container">
+    <input type="text" id="searchInput2" placeholder="Nhập từ khóa...">
+    <button onclick="search2()">Tìm kiếm</button>
+</div>
+<script>
+    // Danh sách từ khóa và mục liên quan
+    var keywords = {
+        "quần áo": "Mục liên quan đến quần áo",
+        "giày dép": "Mục liên quan đến giày dép",
+        "túi xách": "Mục liên quan đến túi xách"
+    };
+
+    // Hàm tìm kiếm
+    function search2() {
+        var keyword = document.getElementById("searchInput2").value.toLowerCase(); // Lấy từ khóa nhập vào và chuyển thành chữ thường
+        var resultDiv = document.getElementById("searchResult2");
+        var resultText = document.getElementById("searchText2");
+
+        // Kiểm tra từ khóa và hiển thị kết quả tương ứng
+        if (keywords.hasOwnProperty(keyword)) {
+            resultText.textContent = keywords[keyword];
+            if(keyword === "quần áo")
+            {
+               openTab('Quanao')
+            }
+            if(keyword === "giày dép")
+            {
+                openTab('Giaydep')
+            }
+            if(keyword === "túi xách")
+            {
+                openTab('Tuixach')
+            }
+        } else {
+            resultText.textContent = "Không tìm thấy kết quả cho từ khóa '" + keyword + "'.";
+        }
+
+        resultDiv.style.display = "block";
+    }
+</script>
+<!-- Kết quả tìm kiếm -->
+<div class="search-result" id="searchResult2">
+    <p id="searchText2"></p>
+</div>
+            <section class="main-content">
+               <div class="container">
+                <div class="div1">
+                    <h2> Giày dép </h2>
+                </div>
+               <div class="product">  
+                
+                    <!--sản phẩm --> 
+                    <div class="item">
+                        <img src="https://cbu01.alicdn.com/img/ibank/O1CN01ojIxSs1j5DSSpztoI_!!3991174496-0-cib.jpg" alt="Product 9">
+                        <h4> Cao gót trung niên </h4>
+                        <p>200.000 VND</p>
+                        <button onclick="addToCart(9)">Thêm vào giỏ hàng</button>
+                        <button onclick="showDescription(9)">Mô tả</button>
+                    </div>
+                    
+                    <div class="item">
+                        <img src="https://file.hstatic.net/1000284478/file/giay-bup-be-nu-cao-got-2_e369ea2429c34346bdb904ce08cdf693_grande.jpg" alt="Product 10">
+                        <h4>Cao gót búp bê </h4>
+                        <p>200.000 VND</p>
+            <button onclick="addToCart(10)">Thêm vào giỏ hàng</button>
+            <button onclick="showDescription(10)">Mô tả</button>
+                    </div>
+                    <div class="item">
+                        <img src="https://pos.nvncdn.com/80c639-72864/ps/20200415_HwWnG1vwmV0BCvvkleqnqb0K.jpg" alt="Product 11">
+                       <h4> Cao gót hồng 5p </h4>
+                       <p>200.000 VND</p>
+                       <button onclick="addToCart(11)">Thêm vào giỏ hàng</button>
+                       <button onclick="showDescription(11)">Mô tả</button>
+                    </div>
+                    
+                    <div class="item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-eaE4RaEk-5xeDxR3kVWHJ96Pc1DZ9nNjODtnly8VqISzdSZELvWFEP9aFsI4eqIIeOM&usqp=CAU" alt="Product 12">
+                       <h4> Giày búp bê nhiều màu  </h4>
+                       <p>200.000 VND</p>
+                       <button onclick="addToCart(12)">Thêm vào giỏ hàng</button>
+                       <button onclick="showDescription(12)">Mô tả</button>
+                    </div>
+                <div class="item">
+                    <img src="https://mymall.vn/wp-content/uploads/2018/09/giay-the-thao-nu-de-cao-1.jpg" alt="Product 6">
+                    <h4>Giày thể thao trắng</h4>
+                    <p>200.000 VND</p>
+            <button onclick="addToCart(6)">Thêm vào giỏ hàng</button>
+            <button onclick="showDescription(6)">Mô tả</button>
+                </div>
+                    <div class="item">
+                        <img src="https://vn-test-11.slatic.net/p/f2f37cee0caa78d7feb13048ca75057f.jpg" alt="Product 13">
+                       <h4> Cao gót nữ xinh  </h4>
+                       <p>200.000 VND</p>
+                       <button onclick="addToCart(13)">Thêm vào giỏ hàng</button>
+                       <button onclick="showDescription(13)">Mô tả</button>
+                    </div>
+
+                    <div class="item">
+                        <img src="https://bizweb.dktcdn.net/100/424/580/products/dep-nu-quai-trong-suot-5-phan-de-vuong-guoc-sandal-nu-mui-vuong-quai-ngang-thanh-lich-cao-5cm-nuddo-n011mb.jpg?v=1683954065537" alt="Product 14">
+                       <h4> Dép nữ trong suốt   </h4>
+                       <p>200.000 VND</p>
+                       <button onclick="addToCart(14)">Thêm vào giỏ hàng</button>
+                       <button onclick="showDescription(14)">Mô tả</button>
+                    </div>
+
+                    <div class="item">
+                        <img src="https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/418592302_342186025378183_4374865624064799744_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHDrl-ep4Baf15GcF9jKs06J-ELarD48wQn4QtqsPjzBNuWAgiuD8e_xcsGBk-ouTMgY_kEr3k6xvy9Mh3IViqx&_nc_ohc=Le_yiUfcdIIAb6PD1QE&_nc_ht=scontent.fsgn5-9.fna&oh=00_AfDnPGvOzSkCeU_mKTDwcxAKZtvQ08DhpRhIUS-Ajz8Iqw&oe=662BF535" alt="Product 15">
+                       <h4> Giày đi học sinh viên </h4>
+                       <p>200.000 VND</p>
+                       <button onclick="addToCart(15)">Thêm vào giỏ hàng</button>
+                       <button onclick="showDescription(15)">Mô tả</button>
+                    </div>
+                    <div class="item">
+                        <img src="https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/421001926_122139129692083188_2863264715811416271_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGvBWpd6nQ-e_wmb9ym0Jt0njYCdyGrquqeNgJ3Iauq6uahvisRluPP2K7Gvybwg_7nz_1NYT_fZPlAYfugwkk1&_nc_ohc=Zhq3ND0QB5EAb4kseV2&_nc_ht=scontent.fsgn5-5.fna&oh=00_AfBH1k91LJXoqLA1xjFvM3VClK2WwylqKVBrEDxa6rR8kA&oe=662C05D3" alt="Product 16">
+                       <h4> Cao gót đen hoa văn    </h4>
+                       <p>200.000 VND</p>
+                       <button onclick="addToCart(16)">Thêm vào giỏ hàng</button>
+                       <button onclick="showDescription(16)">Mô tả</button>
+                    </div>
+                </div>
+                </div>
+                </div>
+                </section>
+                </div>
+                </div>
+                </section>
+                </div>
+ <div id="Tuixach" class="tab-content">
+     <!-- Thanh tìm kiếm -->
+     <div class="search-container">
+        <input type="text" id="searchInput3" placeholder="Nhập từ khóa...">
+        <button onclick="search3()">Tìm kiếm</button>
+    </div>
+    <script>
+        // Danh sách từ khóa và mục liên quan
+        var keywords = {
+            "quần áo": "Mục liên quan đến quần áo",
+            "giày dép": "Mục liên quan đến giày dép",
+            "túi xách": "Mục liên quan đến túi xách"
+        };
+
+        // Hàm tìm kiếm
+        function search3() {
+            var keyword = document.getElementById("searchInput3").value.toLowerCase(); // Lấy từ khóa nhập vào và chuyển thành chữ thường
+            var resultDiv = document.getElementById("searchResult3");
+            var resultText = document.getElementById("searchText3");
+
+            // Kiểm tra từ khóa và hiển thị kết quả tương ứng
+            if (keywords.hasOwnProperty(keyword)) {
+                resultText.textContent = keywords[keyword];
+                if(keyword === "quần áo")
+                {
+                   openTab('Quanao')
+                }
+                if(keyword === "giày dép")
+                {
+                    openTab('Giaydep')
+                }
+                if(keyword === "túi xách")
+                {
+                    openTab('Tuixach')
+                }
+            } else {
+                resultText.textContent = "Không tìm thấy kết quả cho từ khóa '" + keyword + "'.";
+            }
+
+            resultDiv.style.display = "block";
+        }
+    </script>
+    <!-- Kết quả tìm kiếm -->
+    <div class="search-result" id="searchResult3">
+        <p id="searchText3"></p>
+    </div>
+    
+    
+     <section class="main-content">
+        <div class="container">
+            <div class="div1">
+                <h2> Túi xách </h2>
+            </div>
+
+        <div class="product">
+            <div class="item">
+                <img src="https://media.sellycdn.net/files/md_2022_12_23_07_54_46_0700_CPIauIJezA.jpg">
+               <h4> Túi xinh đeo chéo sang chảnh   </h4>
+               <p>200.000 VND</p>
+               <button onclick="addToCart(17)">Thêm vào giỏ hàng</button>
+               <button onclick="showDescription(17)">Mô tả</button>
+            </div>
+            <div class="item">
+                <img src="https://img2.dilyno.com/iq5_UWM4hFqsNyFtGLZD17zuov2QNGKKprKfdemboSw/rs:fill:600:600:0/aHR0cDovL3MzLmFwLW5vcnRoZWFzdC0xLndhc2FiaXN5cy5jb20vaG5jLWNybS1zMy5nZXRjb252ZXJzaW9uLmNvL3dlYmVjb20vMjAyMy8wNC9jNzBmN2VkMjQyYzFhZWVkZmY0N2I1M2Y5OTYxNzQxNy5qcGc.jpg">
+               <h4> Túi hiệu xinh   </h4>
+               <p>200.000 VND</p>
+               <button onclick="addToCart(18)">Thêm vào giỏ hàng</button>
+               <button onclick="showDescription(18)">Mô tả</button>
+            </div>
+
+            <div class="item">
+                <img src="https://cdn.vuanhwatch.com/media/products/tui-xach/36372/tui-deo-vai-lyn-sphere-s-shoulder-bags-ll23cbf005-mau-xanh-blue-63fed500a07a5-01032023113056.jpg">
+               <h4> Túi đeo xanh phối trắng xinh   </h4>
+               <p>200.000 VND</p>
+               <button onclick="addToCart(19)">Thêm vào giỏ hàng</button>
+               <button onclick="showDescription(19)">Mô tả</button>
+            </div>
+
+            <div class="item">
+                <img src="https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/438215961_3829190620698278_4242798047738181578_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHBQkRe4Z7ccv0oaRfwE-BwrrjRyCLloWquuNHIIuWhaup4E0cqmO7wfMctcTtpKBOyF3LBBNzXYXLiAhFaJQwn&_nc_ohc=hJed4r_8d0IAb7WcH5V&_nc_ht=scontent.fsgn5-9.fna&oh=00_AfC8qeGkL-DjRx98Sv437UGxFtcvAcYzeM3vF0LvazpI6A&oe=662C0FE3" alt="Product 3">
+                <h4>Túi baby xinh </h4>
+                <p>200.000 VND</p>
+                <button onclick="addToCart(3)">Thêm vào giỏ hàng</button>
+                <button onclick="showDescription(3)">Mô tả</button>
+            </div>
+            <div class="item">
+                <img src="https://scontent.fsgn5-9.fna.fbcdn.net/v/t1.6435-9/153149519_1645476762302482_6960132632113532907_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFUXT1vXQ0dDsG-V-39u-UppHun8e45J5Wke6fx7jknlb5tF9Y2bmvjlXXtewscaKxPKRMRR1U41ouXUroUClam&_nc_ohc=kSZjblnlJzoAb7rIMjS&_nc_ht=scontent.fsgn5-9.fna&oh=00_AfBnsaG2CxJPcbP-jkZ2S-XdY5Ye_xeSavifRDXDuyFLPg&oe=664D8866">
+               <h4> Túi màu đen Chanel  </h4>
+               <p>200.000 VND</p>
+               <button onclick="addToCart(21)">Thêm vào giỏ hàng</button>
+               <button onclick="showDescription(21)">Mô tả</button>
+            </div>
+
+            <div class="item">
+                <img src="https://scontent.fsgn5-15.fna.fbcdn.net/v/t1.6435-9/151828977_1645476528969172_386644514165644381_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGAzEuxyuKWCjFlwbf2c0kASPddVxEmIQ1I911XESYhDbsF0LCo4uszxUjVDRoS3Nw8_rnyJliUOslmmv_jbQAu&_nc_ohc=T3FU1v_jNsEAb6iKNcr&_nc_ht=scontent.fsgn5-15.fna&oh=00_AfD7T_GeTdkGEfXCQUmz-gXbLHBzjX2Me_eFkNdtqpT0Vw&oe=664D98D6">
+               <h4> Túi đen YSL </h4>
+               <p>200.000 VND</p>
+               <button onclick="addToCart(22)">Thêm vào giỏ hàng</button>
+               <button onclick="showDescription(22)">Mô tả</button>
+            </div>
+            </div>
+            </div>
+            </div>
+            <div id="Tip" class="tab-content">
+                <div class="div1">
+                    <h2> Bài Viết </h2>
+                </div>
+                <div class="container4">
+                    <div class="article-list">
+                        <!-- Bài viết 1 -->
+                        <div class="article">
+                            <img src="https://www.elle.vn/wp-content/uploads/2018/10/14/154922/nhung-phong-cach-thoi-trang-ma-ban-nen-biet.jpg" alt="Hình ảnh bài viết 1">
+                            <h2>Cách phối đồ nữ: 100+ gợi ý phối đồ cực trendy 2024</h2>
+                            <p>Một bộ outfit vừa xinh xắn vừa cá tính chính là vũ khí bí mật giúp các cô nàng luôn tự tin và thu hút ánh nhìn hơn. </p>
+                            <a href="#" class="read-more-btn" onclick="showArticleDetail(1)">Đọc thêm</a>
+                        </div>
+            
+                        <!-- Bài viết 2 -->
+                        <div class="article">
+                            <img src="https://file.hstatic.net/1000317075/file/cach-phoi-do-nu-mua-dong_b0dd72ef86f34eab8625bca0099aee8b.jpg" alt="Hình ảnh bài viết 2">
+                            <h2>Phối đồ mùa đông cho bạn gái </h2>
+                            <p>Bạn đang lo lắng về cách phối trang phục sao cho nổi bật nhưng vẫn giữ được phong cách cá nhân . </p>
+                            <a href="#" class="read-more-btn" onclick="showArticleDetail(2)">Đọc thêm</a>
+                        </div>
+            
+                        <!-- Bài viết 3 -->
+                        <div class="article">
+                            <img src="https://www.elle.vn/wp-content/uploads/2020/03/14/393751/tui-xach-nu-tui-tote-gucci-730x410.jpg" alt="Hình ảnh bài viết 3">
+                            <h2> SAU SỰ TRỖI DẬY CỦA TÚI XÁCH “BÁNH SỪNG BÒ”, TÚI BAGUETTE TRỞ LẠI NHƯ MỘT HIỆN TƯỢNG MỚI </h2>
+                            <p> Kỷ niệm 10 năm tiếp theo, CHATS BY C.DAM ra mắt bộ sưu tập ARCHETYPE, tiếp tục tôn vinh trí tuệ tính nữ và triết lý tối giản khác biệt..</p>
+                            <a href="#" class="read-more-btn" onclick="showArticleDetail(3)">Đọc thêm</a>
+                        </div>
+                    </div>
+            
+                    <div class="article-detail" id="article-detail">
+                        <H1> KHU VỰC TRANG BÀI VIẾT </H1>
+                        <img src="https://scontent.fsgn8-4.fna.fbcdn.net/v/t39.30808-6/439678082_952252536346752_6727289563856589868_n.jpg?stp=dst-jpg_p526x296&_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGw8ZPjg9Wd_K4YQIeEVp28KStCvd1ob0QpK0K93WhvRLeeQwRjG4RzEFUR3z5dLZvNHfH5U1JzAHfEChe7VkxX&_nc_ohc=aJH6qjdIHxIQ7kNvgGXqk3U&_nc_ht=scontent.fsgn8-4.fna&oh=00_AfC4mfq0PkDGaVRWmdszvXasPjWy65LsKxg72sCG1YdC6w&oe=66314D20" alt="Hình ảnh bài viết 1">   
+                        <!-- Chi tiết bài viết và khu vực bình luận sẽ được thêm vào đây -->
+                    </div>
+                </div>
+            
+                </div>
+     <div id="Giohang" class="tab-content">
+                 
+     <div class="search-container">
+        <input type="text" id="searchInput5" placeholder="Nhập từ khóa...">
+        <button onclick="search5()">Tìm kiếm</button>
+    </div>
+    <script>
+        // Danh sách từ khóa và mục liên quan
+        var keywords = {
+            "quần áo": "Mục liên quan đến quần áo",
+            "giày dép": "Mục liên quan đến giày dép",
+            "túi xách": "Mục liên quan đến túi xách"
+        };
+
+        // Hàm tìm kiếm
+        function search5() {
+            var keyword = document.getElementById("searchInput5").value.toLowerCase(); // Lấy từ khóa nhập vào và chuyển thành chữ thường
+            var resultDiv = document.getElementById("searchResult5");
+            var resultText = document.getElementById("searchText5");
+
+            // Kiểm tra từ khóa và hiển thị kết quả tương ứng
+            if (keywords.hasOwnProperty(keyword)) {
+                resultText.textContent = keywords[keyword];
+                if(keyword === "quần áo")
+                {
+                   openTab('Quanao')
+                }
+                if(keyword === "giày dép")
+                {
+                    openTab('Giaydep')
+                }
+                if(keyword === "túi xách")
+                {
+                    openTab('Tuixach')
+                }
+            } else {
+                resultText.textContent = "Không tìm thấy kết quả cho từ khóa '" + keyword + "'.";
+            }
+
+            resultDiv.style.display = "block";
+        }
+    </script>
+    <!-- Kết quả tìm kiếm -->
+    <div class="search-result" id="searchResult5">
+        <p id="searchText5"></p>
+    </div>
+</div>
+<div class="main-container" id="cartContainer" style="display: none;">
+   <h2>Giỏ hàng</h2>
+   <div class="cart-items" id="cartItems"></div>
+   <div class="total">
+       <p>Tổng thanh toán: <span id="totalAmount">0</span></p>
+       <button onclick="checkout()">Thanh toán</button>
+</div>
+</div>
+           <!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>Liên kết nhanh</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Trang chủ</a></li><br>
+                    <li><a href="#">Liên hệ</a></li><br>
+                    <!-- Icon Facebook -->
+<i class="fab fa-facebook"></i>
+
+<!-- Icon TikTok -->
+<i class="fab fa-tiktok"></i>
+
+<!-- Icon Instagram -->
+<i class="fab fa-instagram"></i>
+
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Địa chỉ</h5>
+                <p>12 Nguyễn Văn Bảo, P.4, Q.Gò Vấp, Tp HCM</p>
+            </div>
+            <div class="col-md-4">
+                <h5>Đăng ký để nhận ưu đãi</h5>
+                <form id="subscribe-form">
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="email" placeholder="Nhập địa chỉ email của bạn">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Đăng ký</button>
+                </form>
+                <div id="subscribe-thank-you" style="display: none;">Cảm ơn bạn đã để lại thông tin!</div>
+            </div>
+            </div>
+        </div>
+            </footer>
+            
+            <script>
+                // Mở tab mặc định
+                    document.addEventListener("DOMContentLoaded", function () {
+                openTab('Home');
+                });
+                function openTab(tabName) {
+                    var i, tabcontent;
+                    tabcontent = document.getElementsByClassName("tab-content");
+                    for (i = 0; i < tabcontent.length; i++) {
+                        tabcontent[i].style.display = "none";
+                    }
+                    document.getElementById(tabName).style.display = "block";
+                    if (tabName === 'Giohang') {
+                         showCart(); // Gọi hàm showCart() khi chuyển đến tab "GioHang"
+                       }
+                       else
+                       {
+                       closeCart();
+                       }
+                }
+            
+                function toggleReadMore(sectionNumber) {
+                    var moreText = document.getElementById("more" + sectionNumber);
+                    var dots = document.getElementById("dots" + sectionNumber);
+                    var btnText = document.getElementById("myBtn" + sectionNumber);
+            
+                    if (moreText.style.display === "none" || moreText.style.display === "") {
+                        dots.style.display = "none";
+                        moreText.style.display = "inline";
+                        btnText.innerHTML = "Rút gọn";
+                    } else {
+                        dots.style.display = "inline";
+                        moreText.style.display = "none";
+                        btnText.innerHTML = "Đọc thêm";
+                    }
+                }
+            </script>
+           <!--CHAT TAWK-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/660516271ec1082f04dc4b86/1hq1tt391';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+
+  <!-- Description Popup -->
+<div class="popup" id="descriptionPopup" style="display: none;">
+    <div class="popup-content">
+        <span class="popup-close" onclick="hideDescription()">&times;</span>
+        <img src="" alt="Product Image" id="popupImage">
+        <h4 id="popupTitle"></h4>
+        <p id="popupDescription"></p>
+        <div class="quantity-selector">
+            <button onclick="subtractQuantity()">-</button>
+            <input type="number" id="quantity" value="1" min="1">
+            <button onclick="addQuantity()">+</button>
+        </div>
+        <button onclick="addToCart(currentProductId)">Thêm vào giỏ hàng</button>
+        <button onclick="hideDescription()">Đóng</button>
+    </div>
+</div>
+<script>
+// Đối tượng chứa chi tiết của các sản phẩm
+const productDetails = {
+    1: {
+        name: "Váy đi biển",
+        image: "https://dony.vn/wp-content/uploads/2022/03/decor-goc-chup-anh-cho-shop-quan-ao-1.jpg",
+        description: "Váy đi biển đẹp và thời trang."
+    },
+    2: {
+        name: "Váy đi tiệc",
+        image: "https://scontent.fsgn5-15.fna.fbcdn.net/v/t39.30808-6/437858644_770242008539789_492445802928757032_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHT0l4MTQLUsSh99T2diLF-r9AJZ315ldKv0AlnfXmV0vvlDykCvT8OO27Xe7E5t1v6C8VdXWfCuZtI8TZZTN0v&_nc_ohc=86VF34aj9RMAb7RA11C&_nc_oc=Adi3qKq8UpRLdspXJxMXdVzXzcWcFQvLh-gZlhHi2Cpdz4YWQFxL6nY-fuQ8ulJHlvw&_nc_ht=scontent.fsgn5-15.fna&oh=00_AfCtENe9IkhRQBOsp8avHL0kkofin8jyt4InJjkPZPqNHg&oe=662BD415",
+        description: "Váy đi tiệc sang trọng và lịch sự."
+    },
+    3: {
+        name: "Túi baby xinh",
+        image: "https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/438215961_3829190620698278_4242798047738181578_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHBQkRe4Z7ccv0oaRfwE-BwrrjRyCLloWquuNHIIuWhaup4E0cqmO7wfMctcTtpKBOyF3LBBNzXYXLiAhFaJQwn&_nc_ohc=hJed4r_8d0IAb7WcH5V&_nc_ht=scontent.fsgn5-9.fna&oh=00_AfC8qeGkL-DjRx98Sv437UGxFtcvAcYzeM3vF0LvazpI6A&oe=662C0FE3",
+        description: "Túi xinh  dể phối đồ phối đồ ."
+    },
+    4: {
+        name: "set bộ ngắn xinh ",
+        image: "https://scontent.fsgn5-15.fna.fbcdn.net/v/t39.30808-6/439343828_396210656629755_3569976778127775836_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeG4vP_RydWZGnVQekwGIWU0B_Q4jCZQ8DwH9DiMJlDwPC_jJeuy9onZEW8ypafT2z9sdf9KGiWd4vXtLmOSIVbV&_nc_ohc=go6zE9kIrEIAb6f-BzZ&_nc_ht=scontent.fsgn5-15.fna&oh=00_AfCv0amA5aiculPV81Rf_U0Hc7vzqVS76d6TH3zDtpa8DA&oe=662C02ED",
+        description: "Váy dài đen năng động và cá tính cho giới trẻ."
+    },
+    5: {
+        name: "Giày dây trắng hoa",
+        image: "https://toplist.vn/images/800px/bo-si-giay-dep-nu-610832.jpg",
+        description: "Giày dây trắng hoa thời trang và cá tính."
+    },
+    6: {
+        name: "Giày thể thao trắng",
+        image: "https://mymall.vn/wp-content/uploads/2018/09/giay-the-thao-nu-de-cao-1.jpg",
+        description: "Giày thể thao trắng dễ phối đồ và thời trang."
+    },
+    7: {
+        name: "Set bộ baby",
+        image: "https://scontent.fsgn5-11.fna.fbcdn.net/v/t39.30808-6/438972430_976269524207668_7976763003870829967_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHeJ5J2DlIECN8mU-ERpRB9o7xolMe4asyjvGiUx7hqzCRCDRQPF4jg9K-jm2A2YLAVrPOh7FbpzTwhLlghfJ_j&_nc_ohc=uHx4Sd3-I4cAb4I4U7E&_nc_ht=scontent.fsgn5-11.fna&oh=00_AfAP1HZexpFtUz3TfwnMu5XkN-a6H4mEmh01T49EZuzvOQ&oe=662BEB1F",
+        description: "Váy trắng tiệc thời trang và sang trọng."
+    },
+    8: {
+        name: "Chân váy dài",
+        image: "https://salt.tikicdn.com/cache/w1200/ts/product/c8/6f/64/bd8afb8f2b55004077dc58ab04fef5d0.jpg",
+        description: "Chân váy dài nữ tính và thanh lịch."
+    },
+    9: {
+        name: "Cao gót trung niên",
+        image: "https://cbu01.alicdn.com/img/ibank/O1CN01ojIxSs1j5DSSpztoI_!!3991174496-0-cib.jpg",
+        description: "Cao gót trung niên thời trang và thu hút."
+    },
+    10: {
+        name: "Cao gót búp bê",
+        image: "https://file.hstatic.net/1000284478/file/giay-bup-be-nu-cao-got-2_e369ea2429c34346bdb904ce08cdf693_grande.jpg",
+        description: "Cao gót búp bê dễ thương và đáng yêu."
+    },
+    11: {
+        name: "Cao gót hồng 5 phân",
+        image: "https://pos.nvncdn.com/80c639-72864/ps/20200415_HwWnG1vwmV0BCvvkleqnqb0K.jpg",
+        description: "Cao gót hồng 5 phân nổi bật và cá tính."
+    },
+    12: {
+        name: "Giày búp bê nhiều màu",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-eaE4RaEk-5xeDxR3kVWHJ96Pc1DZ9nNjODtnly8VqISzdSZELvWFEP9aFsI4eqIIeOM&usqp=CAU",
+        description: "Giày búp bê nhiều màu sắc tươi sáng và trẻ trung."
+    },
+    13: {
+        name: "Cao gót nữ xinh",
+        image: "https://vn-test-11.slatic.net/p/f2f37cee0caa78d7feb13048ca75057f.jpg",
+        description: "Cao gót nữ xinh thời trang và đáng yêu."
+    },
+    14: {
+        name: "Dép nữ trong suốt",
+        image: "https://bizweb.dktcdn.net/100/424/580/products/dep-nu-quai-trong-suot-5-phan-de-vuong-guoc-sandal-nu-mui-vuong-quai-ngang-thanh-lich-cao-5cm-nuddo-n011mb.jpg?v=1683954065537",
+        description: "Dép nữ trong suốt mang lại sự thoải mái và thanh lịch."
+    },
+    15: {
+        name: "Giày đi học sinh viên",
+        image: "https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/418592302_342186025378183_4374865624064799744_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHDrl-ep4Baf15GcF9jKs06J-ELarD48wQn4QtqsPjzBNuWAgiuD8e_xcsGBk-ouTMgY_kEr3k6xvy9Mh3IViqx&_nc_ohc=Le_yiUfcdIIAb6PD1QE&_nc_ht=scontent.fsgn5-9.fna&oh=00_AfDnPGvOzSkCeU_mKTDwcxAKZtvQ08DhpRhIUS-Ajz8Iqw&oe=662BF535",
+        description: "Giày đi học sinh viên thời trang và trẻ trung."
+    },
+    16: {
+        name: "Cao gót đen hoa văn",
+        image: "https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/421001926_122139129692083188_2863264715811416271_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGvBWpd6nQ-e_wmb9ym0Jt0njYCdyGrquqeNgJ3Iauq6uahvisRluPP2K7Gvybwg_7nz_1NYT_fZPlAYfugwkk1&_nc_ohc=Zhq3ND0QB5EAb4kseV2&_nc_ht=scontent.fsgn5-5.fna&oh=00_AfBH1k91LJXoqLA1xjFvM3VClK2WwylqKVBrEDxa6rR8kA&oe=662C05D3",
+        description: "Cao gót đen hoa văn thời trang và cá tính."
+    },
+    17: {
+        name: "Túi xinh đeo chéo sang chảnh",
+        image: "https://media.sellycdn.net/files/md_2022_12_23_07_54_46_0700_CPIauIJezA.jpg",
+        description: "Túi xinh đeo chéo sang chảnh, phù hợp với các dịp đặc biệt."
+    },
+    18: {
+        name: "Túi hiệu xinh",
+        image: "https://img2.dilyno.com/iq5_UWM4hFqsNyFtGLZD17zuov2QNGKKprKfdemboSw/rs:fill:600:600:0/aHR0cDovL3MzLmFwLW5vcnRoZWFzdC0xLndhc2FiaXN5cy5jb20vaG5jLWNybS1zMy5nZXRjb252ZXJzaW9uLmNvL3dlYmVjb20vMjAyMy8wNC9jNzBmN2VkMjQyYzFhZWVkZmY0N2I1M2Y5OTYxNzQxNy5qcGc.jpg",
+        description: "Túi hiệu xinh phong cách và đẳng cấp."
+    },
+    19: {
+        name: "Túi đeo xanh phối trắng xinh",
+        image: "https://cdn.vuanhwatch.com/media/products/tui-xach/36372/tui-deo-vai-lyn-sphere-s-shoulder-bags-ll23cbf005-mau-xanh-blue-63fed500a07a5-01032023113056.jpg",
+        description: "Túi đeo xanh phối trắng xinh xắn và thời trang."
+    },
+    20: {
+        name: "Balo xinh nâu, trắng",
+        image: "https://product.hstatic.net/1000103112/product/z4955120831462_44852a5187f8abfe5f489590e9e53224_2e816df6bfbf40cb9f8300d82ed1d4db_master.jpg",
+        description: "Balo xinh màu nâu, trắng thời trang và tiện dụng."
+    },
+    21: {
+        name: "Túi màu đen Chanel",
+        image: "https://scontent.fsgn5-9.fna.fbcdn.net/v/t1.6435-9/153149519_1645476762302482_6960132632113532907_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFUXT1vXQ0dDsG-V-39u-UppHun8e45J5Wke6fx7jknlb5tF9Y2bmvjlXXtewscaKxPKRMRR1U41ouXUroUClam&_nc_ohc=kSZjblnlJzoAb7rIMjS&_nc_ht=scontent.fsgn5-9.fna&oh=00_AfBnsaG2CxJPcbP-jkZ2S-XdY5Ye_xeSavifRDXDuyFLPg&oe=664D8866g",
+        description: "Túi xinh tiện dụng cho giới trẻ."
+    },
+    22: {
+        name: "Túi đen YSL",
+        image: "https://scontent.fsgn5-15.fna.fbcdn.net/v/t1.6435-9/151828977_1645476528969172_386644514165644381_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGAzEuxyuKWCjFlwbf2c0kASPddVxEmIQ1I911XESYhDbsF0LCo4uszxUjVDRoS3Nw8_rnyJliUOslmmv_jbQAu&_nc_ohc=T3FU1v_jNsEAb6iKNcr&_nc_ht=scontent.fsgn5-15.fna&oh=00_AfD7T_GeTdkGEfXCQUmz-gXbLHBzjX2Me_eFkNdtqpT0Vw&oe=664D98D6",
+        description: "Túi đen YSL thời trang và lịch lãm."
+    },
+    23:{
+        name: "Váy trắng dạ tiệc",
+        image: "https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/436516270_761083812805042_2442831875979382470_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEyZT-JE7g1k-uaLeb0rR8JXXdjWnyiP89dd2NafKI_z5oIoY5JOe1ZIj19GWPcDuGdXLnm1PzZT6ZdvO423qij&_nc_ohc=5uZQQyGNfQ0Ab5moAJq&_nc_ht=scontent.fsgn5-5.fna&oh=00_AfDotvy5z398pKGpleUSNw7n0UUBGYl9hg5RAs07XAu6fQ&oe=662BDC56",
+        description: "Váy trắng thời trang sang trọng và xinh xắn cho giới trẻ.."
+    },
+    };
+
+// Function hiển thị popup với thông tin chi tiết sản phẩm
+function showDescription(productId) {
+    const product = productDetails[productId];
+    document.getElementById('popupImage').src = product.image;
+    document.getElementById('popupTitle').innerText = product.name;
+    document.getElementById('popupDescription').innerText = product.description;
+    currentProductId = productId;
+    document.getElementById('descriptionPopup').style.display = 'block';
+}
+
+// Function ẩn popup
+function hideDescription() {
+    document.getElementById('descriptionPopup').style.display = 'none';
+}
+
+// Function tăng số lượng sản phẩm
+function addQuantity() {
+    const quantityInput = document.getElementById('quantity');
+    const currentValue = parseInt(quantityInput.value);
+    if (!isNaN(currentValue)) {
+        quantityInput.value = currentValue + 1;
+    }
+}
+
+
+// Function giảm số lượng sản phẩm
+function subtractQuantity() {
+    const quantityInput = document.getElementById('quantity');
+    const currentValue = parseInt(quantityInput.value);
+    if (!isNaN(currentValue) && currentValue > 1) {
+        quantityInput.value = currentValue - 1;
+    }
+}
+</script>
+
+<!-- Notification -->
+<div class="notification" id="notification">
+    Đã thêm vào giỏ hàng!
+</div>
+
+<script>
+   let cartItems = []; // Mảng chứa các sản phẩm trong giỏ hàng
+   let closeButtonCreated = false; // Biến để kiểm tra xem nút đóng đã được tạo hay chưa
+
+// Hàm để ẩn danh sách sản phẩm trong giỏ hàng
+function hideCartItems() {
+    const cartItemsContainer = document.getElementById('cartItems');
+    cartItemsContainer.innerHTML = ''; // Xóa nội dung trong danh sách sản phẩm
+}
+
+// Thêm sản phẩm vào giỏ hàng
+function addToCart(productId) {
+    const product = getProductById(productId);
+    if (product) {
+        // Kiểm tra xem sản phẩm đã có trong giỏ hàng chưa
+        const existingItem = cartItems.find(item => item.id === productId);
+        if (existingItem) {
+            existingItem.quantity++; // Tăng số lượng nếu sản phẩm đã có trong giỏ hàng
+        } else {
+            cartItems.push({ ...product, quantity: 1 }); // Thêm sản phẩm mới vào giỏ hàng
+        }
+        showNotification(); // Hiển thị thông báo khi thêm sản phẩm vào giỏ hàng thành công
+    } else {
+        console.error(`Không tìm thấy sản phẩm có ID: ${productId}`);
+    }
+}
+
+// Hiển thị giỏ hàng
+function showCart() {
+    const cartItemsContainer = document.getElementById('cartItems');
+    const totalAmountElement = document.getElementById('totalAmount');
+
+    cartItemsContainer.innerHTML = ''; // Xóa nội dung cũ trong container sản phẩm
+
+    let totalAmount = 0;
+
+    // Duyệt qua từng sản phẩm trong giỏ hàng
+    cartItems.forEach(item => {
+        const itemElement = document.createElement('div');
+        itemElement.classList.add('cart-item');
+        itemElement.innerHTML = `
+            <img src="${item.image}" alt="${item.name}">
+            <h4>${item.name}</h4>
+            <p>Giá: ${formatCurrency(item.price)}</p>
+            <input type="number" min="1" value="${item.quantity}" onchange="updateQuantity(${item.id}, this.value)">
+            <button onclick="removeFromCart(${item.id})">Xóa</button>
+        `;
+        cartItemsContainer.appendChild(itemElement);
+
+        // Tính tổng tiền của từng sản phẩm (giá * số lượng) và cộng dồn vào totalAmount
+        totalAmount += item.price * item.quantity;
+    });
+
+    // Hiển thị tổng tiền ở định dạng tiền tệ VND
+    totalAmountElement.textContent = `${formatCurrency(totalAmount)}`;
+
+    // Hiển thị giỏ hàng
+    const cartContainer = document.getElementById('cartContainer');
+    cartContainer.style.display = 'block';
+}
+
+// Xóa sản phẩm khỏi giỏ hàng
+function removeFromCart(productId) {
+    cartItems = cartItems.filter(item => item.id !== productId); // Lọc bỏ sản phẩm có ID trùng khớp
+    showCart(); // Hiển thị lại giỏ hàng sau khi xóa sản phẩm
+}
+
+// Cập nhật số lượng sản phẩm trong giỏ hàng
+function updateQuantity(productId, newQuantity) {
+    const item = cartItems.find(item => item.id === productId);
+    if (item) {
+        item.quantity = parseInt(newQuantity) || 1; // Cập nhật số lượng mới (phải là số nguyên dương)
+        showCart(); // Hiển thị lại giỏ hàng sau khi cập nhật số lượng
+    }
+}
+
+// Định dạng số tiền thành đơn vị VND
+function formatCurrency(amount) {
+    return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(amount);
+}
+
+    
+// Lấy thông tin sản phẩm theo ID
+function getProductById(productId) {
+    // Dữ liệu sản phẩm có thể lấy từ một mảng hoặc đối tượng chứa thông tin các sản phẩm
+    const products = {
+        1: {
+            id: 1,
+            name: "Váy đi biển",
+            image: "https://dony.vn/wp-content/uploads/2022/03/decor-goc-chup-anh-cho-shop-quan-ao-1.jpg",
+            price: 200000
+        },
+        2: {
+            id: 2,
+        name: "Váy trắng dạ tiệc",
+        image: "https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/436516270_761083812805042_2442831875979382470_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEyZT-JE7g1k-uaLeb0rR8JXXdjWnyiP89dd2NafKI_z5oIoY5JOe1ZIj19GWPcDuGdXLnm1PzZT6ZdvO423qij&_nc_ohc=5uZQQyGNfQ0Ab5moAJq&_nc_ht=scontent.fsgn5-5.fna&oh=00_AfDotvy5z398pKGpleUSNw7n0UUBGYl9hg5RAs07XAu6fQ&oe=662BDC56",
+        price: 200000   
+    },
+
+        3: {
+            id: 3,
+            name: "Túi baby xinh",
+        image: "https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/438215961_3829190620698278_4242798047738181578_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHBQkRe4Z7ccv0oaRfwE-BwrrjRyCLloWquuNHIIuWhaup4E0cqmO7wfMctcTtpKBOyF3LBBNzXYXLiAhFaJQwn&_nc_ohc=hJed4r_8d0IAb7WcH5V&_nc_ht=scontent.fsgn5-9.fna&oh=00_AfC8qeGkL-DjRx98Sv437UGxFtcvAcYzeM3vF0LvazpI6A&oe=662C0FE3",
+            price: 200000
+        },
+        4: {
+        name: "set bộ ngắn xinh ",
+        image: "https://scontent.fsgn5-15.fna.fbcdn.net/v/t39.30808-6/439343828_396210656629755_3569976778127775836_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeG4vP_RydWZGnVQekwGIWU0B_Q4jCZQ8DwH9DiMJlDwPC_jJeuy9onZEW8ypafT2z9sdf9KGiWd4vXtLmOSIVbV&_nc_ohc=go6zE9kIrEIAb6f-BzZ&_nc_ht=scontent.fsgn5-15.fna&oh=00_AfCv0amA5aiculPV81Rf_U0Hc7vzqVS76d6TH3zDtpa8DA&oe=662C02ED",
+        price: 200000
+    },
+    5: {
+        name: "Giày dây trắng hoa",
+        image: "https://toplist.vn/images/800px/bo-si-giay-dep-nu-610832.jpg",
+        pprice: 200000
+    },
+    6: {
+        name: "Giày thể thao trắng",
+        image: "https://mymall.vn/wp-content/uploads/2018/09/giay-the-thao-nu-de-cao-1.jpg",
+        price: 200000
+    },
+    7: {
+        name: "Set bộ baby",
+        image: "https://scontent.fsgn5-11.fna.fbcdn.net/v/t39.30808-6/438972430_976269524207668_7976763003870829967_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHeJ5J2DlIECN8mU-ERpRB9o7xolMe4asyjvGiUx7hqzCRCDRQPF4jg9K-jm2A2YLAVrPOh7FbpzTwhLlghfJ_j&_nc_ohc=uHx4Sd3-I4cAb4I4U7E&_nc_ht=scontent.fsgn5-11.fna&oh=00_AfAP1HZexpFtUz3TfwnMu5XkN-a6H4mEmh01T49EZuzvOQ&oe=662BEB1F",
+        price: 200000
+    },
+    8: {
+        name: "Chân váy dài",
+        image: "https://salt.tikicdn.com/cache/w1200/ts/product/c8/6f/64/bd8afb8f2b55004077dc58ab04fef5d0.jpg",
+        price: 200000
+    },
+    9: {
+        name: "Cao gót trung niên",
+        image: "https://cbu01.alicdn.com/img/ibank/O1CN01ojIxSs1j5DSSpztoI_!!3991174496-0-cib.jpg",
+        price: 200000
+    },
+    10: {
+        name: "Cao gót búp bê",
+        image: "https://file.hstatic.net/1000284478/file/giay-bup-be-nu-cao-got-2_e369ea2429c34346bdb904ce08cdf693_grande.jpg",
+        price: 200000
+    },
+    11: {
+        name: "Cao gót hồng 5 phân",
+        image: "https://pos.nvncdn.com/80c639-72864/ps/20200415_HwWnG1vwmV0BCvvkleqnqb0K.jpg",
+        price: 200000
+    },
+    12: {
+        name: "Giày búp bê nhiều màu",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-eaE4RaEk-5xeDxR3kVWHJ96Pc1DZ9nNjODtnly8VqISzdSZELvWFEP9aFsI4eqIIeOM&usqp=CAU",
+        price: 200000
+    },
+    13: {
+        name: "Cao gót nữ xinh",
+        image: "https://vn-test-11.slatic.net/p/f2f37cee0caa78d7feb13048ca75057f.jpg",
+        price: 200000
+    },
+    14: {
+        name: "Dép nữ trong suốt",
+        image: "https://bizweb.dktcdn.net/100/424/580/products/dep-nu-quai-trong-suot-5-phan-de-vuong-guoc-sandal-nu-mui-vuong-quai-ngang-thanh-lich-cao-5cm-nuddo-n011mb.jpg?v=1683954065537",
+        price: 200000
+    },
+    15: {
+        name: "Giày đi học sinh viên",
+        image: "https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/418592302_342186025378183_4374865624064799744_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHDrl-ep4Baf15GcF9jKs06J-ELarD48wQn4QtqsPjzBNuWAgiuD8e_xcsGBk-ouTMgY_kEr3k6xvy9Mh3IViqx&_nc_ohc=Le_yiUfcdIIAb6PD1QE&_nc_ht=scontent.fsgn5-9.fna&oh=00_AfDnPGvOzSkCeU_mKTDwcxAKZtvQ08DhpRhIUS-Ajz8Iqw&oe=662BF535",
+        price: 200000
+    },
+    16: {
+        name: "Cao gót đen hoa văn",
+        image: "https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/421001926_122139129692083188_2863264715811416271_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGvBWpd6nQ-e_wmb9ym0Jt0njYCdyGrquqeNgJ3Iauq6uahvisRluPP2K7Gvybwg_7nz_1NYT_fZPlAYfugwkk1&_nc_ohc=Zhq3ND0QB5EAb4kseV2&_nc_ht=scontent.fsgn5-5.fna&oh=00_AfBH1k91LJXoqLA1xjFvM3VClK2WwylqKVBrEDxa6rR8kA&oe=662C05D3",
+        price: 200000
+    },
+    17: {
+        name: "Túi xinh đeo chéo sang chảnh",
+        image: "https://media.sellycdn.net/files/md_2022_12_23_07_54_46_0700_CPIauIJezA.jpg",
+        price: 200000    
+    },
+    18: {
+        name: "Túi hiệu xinh",
+        image: "https://img2.dilyno.com/iq5_UWM4hFqsNyFtGLZD17zuov2QNGKKprKfdemboSw/rs:fill:600:600:0/aHR0cDovL3MzLmFwLW5vcnRoZWFzdC0xLndhc2FiaXN5cy5jb20vaG5jLWNybS1zMy5nZXRjb252ZXJzaW9uLmNvL3dlYmVjb20vMjAyMy8wNC9jNzBmN2VkMjQyYzFhZWVkZmY0N2I1M2Y5OTYxNzQxNy5qcGc.jpg",
+        price: 200000   
+    },
+    19: {
+        name: "Túi đeo xanh phối trắng xinh",
+        image: "https://cdn.vuanhwatch.com/media/products/tui-xach/36372/tui-deo-vai-lyn-sphere-s-shoulder-bags-ll23cbf005-mau-xanh-blue-63fed500a07a5-01032023113056.jpg",
+        price: 200000    
+    },
+    20: {
+        name: "Balo xinh nâu, trắng",
+        image: "https://product.hstatic.net/1000103112/product/z4955120831462_44852a5187f8abfe5f489590e9e53224_2e816df6bfbf40cb9f8300d82ed1d4db_master.jpg",
+        price: 200000    
+    },
+    21: {
+        name: "Túi màu đen Chanel",
+        image: "https://scontent.fsgn5-9.fna.fbcdn.net/v/t1.6435-9/153149519_1645476762302482_6960132632113532907_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFUXT1vXQ0dDsG-V-39u-UppHun8e45J5Wke6fx7jknlb5tF9Y2bmvjlXXtewscaKxPKRMRR1U41ouXUroUClam&_nc_ohc=kSZjblnlJzoAb7rIMjS&_nc_ht=scontent.fsgn5-9.fna&oh=00_AfBnsaG2CxJPcbP-jkZ2S-XdY5Ye_xeSavifRDXDuyFLPg&oe=664D8866",
+        price: 200000    
+    },
+    22: {
+        name: "Túi đen YSL",
+        image: "https://scontent.fsgn5-15.fna.fbcdn.net/v/t1.6435-9/151828977_1645476528969172_386644514165644381_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGAzEuxyuKWCjFlwbf2c0kASPddVxEmIQ1I911XESYhDbsF0LCo4uszxUjVDRoS3Nw8_rnyJliUOslmmv_jbQAu&_nc_ohc=T3FU1v_jNsEAb6iKNcr&_nc_ht=scontent.fsgn5-15.fna&oh=00_AfD7T_GeTdkGEfXCQUmz-gXbLHBzjX2Me_eFkNdtqpT0Vw&oe=664D98D6",
+        price: 200000    
+    },
+    23: {
+        name: "Váy trắng dạ tiệc",
+        image: "https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/436516270_761083812805042_2442831875979382470_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEyZT-JE7g1k-uaLeb0rR8JXXdjWnyiP89dd2NafKI_z5oIoY5JOe1ZIj19GWPcDuGdXLnm1PzZT6ZdvO423qij&_nc_ohc=5uZQQyGNfQ0Ab5moAJq&_nc_ht=scontent.fsgn5-5.fna&oh=00_AfDotvy5z398pKGpleUSNw7n0UUBGYl9hg5RAs07XAu6fQ&oe=662BDC56",
+        description: "Váy trắng dạ tiệc xinh xắn ."
+    },
+};
+
+    // Kiểm tra xem productId có tồn tại trong danh sách sản phẩm hay không
+    return products[productId] || null; // Trả về thông tin sản phẩm theo ID, hoặc null nếu không tìm thấy
+}
+
+// Hiển thị thông báo khi thao tác thành công
+function showNotification() {
+    const notification = document.getElementById('notification');
+    notification.style.display = 'block';
+    setTimeout(() => {
+        notification.style.display = 'none';
+    }, 2000);
+}
+function showArticleDetail(articleId) {
+            var articleDetail = document.getElementById("article-detail");
+            // Xử lý hiển thị nội dung chi tiết và khu vực bình luận tương ứng với từng bài viết
+            openTab("Tip")// chắc chắn tab Tip phải được bật lên
+            switch (articleId) {
+                case 1:
+                    articleDetail.innerHTML = `
+                        <h2>Cách phối đồ nữ: 100+ gợi ý phối đồ cực trendy 2024</h2>
+                        <img src="https://www.elle.vn/wp-content/uploads/2018/10/14/154922/nhung-phong-cach-thoi-trang-ma-ban-nen-biet.jpg" alt="Hình ảnh bài viết 1">
+                        <p>Một bộ outfit vừa xinh xắn vừa cá tính chính là vũ khí bí mật giúp các cô nàng luôn tự tin và thu hút ánh nhìn hơn.</p>
+                       <h3> 2. Lựa chọn họa tiết đơn giản</h3>
+                        <p>Lựa chọn hoạ tiết đơn giản không chỉ giúp các nàng dễ phối đồ, dễ mặc mà còn giúp che đi những khuyết điểm trên cơ thể một cách khéo léo. Các nàng có thể tham khảo những bộ trang phục có gam màu trơn, màu trung tính hoặc có hoạ tiết đơn giản như kẻ sọc nhỏ, chấm bi đơn sắc,… để tôn lên vẻ đẹp thanh lịch, giản dị và lịch sự.
+                            <img src="https://tiki.vn/blog/wp-content/uploads/2022/12/phoi-do-nu-da-phong-cach.png" alt="Hình ảnh bài viết 1">
+                        <h3>3. Thêm phụ kiện tạo điểm nhấn tinh tế</h3>
+                            <p>Dù bạn phối quần áo đẹp đến đâu mà không biết kết hợp cùng phụ kiện thì cũng không thể có một tổng thể hoàn hảo được. Chỉ cần sử dụng 2 đến 3 món phụ kiện như khuyên tai, vòng cổ hay thắt lưng, túi xách,… là đã khiến bạn trông ấn tượng hơn rất nhiều.</p>
+                            <img src="https://tiki.vn/blog/wp-content/uploads/2023/01/deo-tui-xach-dieu-da-de-nu-tinh-hon" alt="Hình ảnh bài viết 1">
+                            <div class="comment-box">
+                            <textarea id="comment-1" placeholder="Hãy để lại bình luận của bạn"></textarea>
+                            <input type="submit" value="Gửi" onclick="showComment(1)">
+                        </div>
+                        <ul id="comment-list-1" class="comment-list no-comment">
+                            <li>Hãy để lại bình luận của bạn</li>
+                        </ul>
+                    `;
+                break;
+                case 2:
+                    articleDetail.innerHTML = `
+                        <h2> Phối đồ mùa đông cho bạn gái </h2>
+                        <img src="https://file.hstatic.net/1000317075/file/cach-phoi-do-nu-mua-dong_b0dd72ef86f34eab8625bca0099aee8b.jpg" alt="Hình ảnh bài viết 2">
+                        <h2>Áo choàng gió mix quần skinny</h2>
+                            <p> Những chiếc áo choàng gió Cardina luôn được nhiều khách hàng đánh giá cao không chỉ là chất lượng mà còn cả về thiết kế. Điểm cộng của sản phẩm này là phần khóa kéo có kèm đai thắt cực tôn dáng. Các bạn có thể mặc khoác bên ngoài hoặc cài dây thắt lưng để có một outfit trẻ trung và thanh lịch.
+
+            Mix cùng quần skinny đơn giản nhưng vẫn cực thời trang. Các bạn có thể mặc set đồ này đến nhiều không gian khác nhau. Từ mặc đi làm, mặc đi chơi hay mặc ở nhà đều đẹp. Ngoài ra, Áo khoác gió nữ dáng dài của Cardina cũng có nhiều tính năng độc đáo như khả năng chống nước, chống bụi bẩn. Giữ ấm và bảo vệ cơ thể cũng như sức khỏe của chị em.
+
+            Bộ sưu tập áo choàng gió của Cardina cũng có rất nhiều màu sắc khác nhau cho chị em chọn lựa. Từ màu đen sang trọng, đến màu đỏ nữ tính hay màu hồng vỏ đỗ thanh lịch,... các bạn có thể chọn lựa theo sở thích của mình.</p>
+            <img src="https://file.hstatic.net/1000317075/file/ao-gile-mix-ao-sweater_a3d15f9d2f1b4f57a734e236b2f8800f.jpg" alt="Hình ảnh bài viết 1">
+           
+            <h2> Áo hoodie mix quần jean và giày thể thao</h2>
+                <p>  Nếu bạn đang cần một set đồ để đi chơi với bạn bè hoặc đi dã ngoại vào ngày lạnh mùa đông thì những chiếc áo hoodie sẽ là một sự lựa chọn tuyệt lắm đó. Các bạn có thể mix chiếc áo này cũng với quần jean ống côn hoặc những chiếc quần thun jogger cá tính. Những cô nàng "nấm lùn" cũng hoàn toàn có thể hold được phong cách thời trang này, hơn thế còn giúp bạn ăn gian chiều cao đáng kể đó. </p>
+                <img src="https://file.hstatic.net/1000317075/file/ao-hoodie-mix-giay-the-thao_6ba4ffab23424e55af844ebd497a6562.jpg" alt="Hình ảnh bài viết 1">      
+                
+                <div class="comment-box">
+                            <textarea id="comment-2" placeholder="Hãy để lại bình luận của bạn"></textarea>
+                            <input type="submit" value="Gửi" onclick="showComment(2)">
+                        </div>
+                        <ul id="comment-list-2" class="comment-list no-comment">
+                            <li>Hãy để lại bình luận của bạn</li>
+                        </ul>
+                    `;
+                    break;
+                case 3:
+                    articleDetail.innerHTML = `
+                        <h2>SAU SỰ TRỖI DẬY CỦA TÚI XÁCH “BÁNH SỪNG BÒ”, TÚI BAGUETTE TRỞ LẠI NHƯ MỘT HIỆN TƯỢNG MỚI </h2>
+                        <img src="https://www.elle.vn/wp-content/uploads/2020/03/14/393751/tui-xach-nu-tui-tote-gucci-730x410.jpg" alt="Hình ảnh bài viết 3">
+                        <p>Thế giới thời trang ngày nay không còn bó hẹp trong những quy tắc cứng nhắc, mà thay vào đó, nó đang ngày càng trở nên cởi mở và đa dạng hơn bao giờ hết. Chính sự “bất quy tắc” này đã mở ra cánh cửa cho các nhà thiết kế thỏa sức sáng tạo, khai thác nguồn cảm hứng từ những vật dụng tưởng chừng như bình thường nhất trong đời sống.
+
+Những chiếc túi xách độc đáo với hình dáng “bất bình thường” chính là minh chứng rõ ràng nhất cho xu hướng này. Từ chiếc điện thoại có dây tiện lợi, túi đựng rác quen thuộc cho đến chiếc bánh mì baguette thơm ngon – tất cả đều có thể trở thành nguồn cảm hứng bất tận cho các nhà thiết kế tài ba.</p>
+                        <h3>Phối đồ đa dạng với túi </h3>
+                        <p>Những phiên bản Baguette “nóng hổi” liên tục được “xuất lò” từ các thương hiệu thời trang khác nhau, mang đến cho giới mộ điệu những cách mô phỏng độc đáo và đầy sáng tạo. Không còn bó hẹp trong thiết kế truyền thống, Baguette giờ đây được biến tấu với nhiều kiểu dáng, kích thước và màu sắc khác nhau, thổi bùng sức sống mới cho món phụ kiện kinh điển này.
+
+Từ những chiếc túi Baguette mini nhỏ nhắn xinh xắn đến những phiên bản “siêu to khổng lồ” cá tính, từ những gam màu trung tính thanh lịch đến những họa tiết rực rỡ bắt mắt, Baguette phiên bản mới hứa hẹn sẽ chiều lòng mọi tín đồ thời trang. Dù bạn yêu thích phong cách thanh lịch hay cá tính, cổ điển hay hiện đại, chắc chắn bạn cũng sẽ tìm được phiên bản Baguette phù hợp với bản thân..</p>
+<img src="https://www.elle.vn/wp-content/uploads/2024/04/21/583241/3ed4636d41462d21edb1510b8991845c.jpg" alt="Hình ảnh bài viết 1">   
+                        <div class="comment-box">
+                            <textarea id="comment-3" placeholder="Hãy để lại bình luận của bạn"></textarea>
+                            <input type="submit" value="Gửi" onclick="showComment(3)">
+                        </div>
+                        <ul id="comment-list-3" class="comment-list no-comment">
+                            <li>Hãy để lại bình luận của bạn</li>
+                        </ul>
+                    `;
+                    break;
+                default:
+                    break;
+            }
+        }
+        function showComment(articleId) {
+            var commentContent = document.getElementById("comment-" + articleId).value;
+            var commentList = document.getElementById("comment-list-" + articleId);
+            var newComment = document.createElement("li");
+            var avatar = document.createElement("img");
+            avatar.src = "https://genzrelax.com/wp-content/uploads/2022/03/anh-anime-chibi-cute-10.jpg"; // Thay đổi link hình ảnh avatar tùy theo nhu cầu
+            avatar.alt = "Avatar";
+            newComment.appendChild(avatar);
+            var commentText = document.createElement("p");
+            commentText.textContent = commentContent;
+            newComment.appendChild(commentText);
+            commentList.appendChild(newComment);
+            document.getElementById("comment-" + articleId).value = ""; // Xóa nội dung trong textarea sau khi gửi
+        }
+// Đóng cửa sổ giỏ hàng
+function closeCart() {
+    const cartContainer = document.getElementById('cartContainer');
+    cartContainer.style.display = 'none';
+}
+</script>
+
+</body>
+</html>
